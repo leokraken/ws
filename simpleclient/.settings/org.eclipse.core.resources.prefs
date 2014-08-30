@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+encoding//src/ACME/DtResult.java=UTF-8
+encoding//src/ACME/DtTransaction.java=UTF-8
+encoding//src/ACME/TransactionsPortBindingStub.java=UTF-8
+encoding//src/ACME/Transactions_PortType.java=UTF-8
+encoding//src/ACME/Transactions_Service.java=UTF-8
+encoding//src/ACME/Transactions_ServiceLocator.java=UTF-8
