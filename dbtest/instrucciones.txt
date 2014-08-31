@@ -1,0 +1,2 @@
+- Descargar y agregar al build path el driver mySQL para java. Descargar de: http://www.mysql.com/products/connector/
+
