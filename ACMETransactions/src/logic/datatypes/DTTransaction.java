@@ -11,14 +11,14 @@ public class DTTransaction {
 	private long id;
 	private String fecha;			//Formato ddmmyy
 	private String hora;			//Formato hhmmss
-	private String tipo; 			//Compra, depósito, consulta de saldo
+	private String tipo; 			//compra, deposito, consulta de saldo
 	private String codigoComercio;
 	private String nombreComercio;	
 	private String mumeroTarjeta;
-	private String tipoTarjeta;		//Débito, crédito, prepaga
+	private String tipoTarjeta;		//debito, credito, prepaga
 	private String codigoMoneda;	//UYU, USD
 	private String tipoDispositivo;	//POS, WEB, ATM ==> WS solo acepta tipo POS.
-	private BigDecimal monto;			//En la letra dice decimal, que no existe en java (si en C#, putos todos)
+	private BigDecimal monto;			
 	
 	public long getId() {
 		return id;
