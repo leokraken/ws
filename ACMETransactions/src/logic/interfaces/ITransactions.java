@@ -2,7 +2,7 @@ package logic.interfaces;
 
 import java.util.List;
 
-import logic.datatypes.DTTransaction;
+import logic.datatypes.Transaction;
 import logic.datatypes.InvalidDataException;
 
 
@@ -14,6 +14,6 @@ public interface ITransactions {
 	 * @param data
 	 * @throws InvalidDataException si contiene datos invalidos.
 	 */
-	public void ProcessTransaction(List<DTTransaction> data) throws InvalidDataException;
+	public void ProcessTransaction(List<Transaction> data) throws InvalidDataException;
 
 }

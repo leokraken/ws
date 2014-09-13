@@ -1,5 +1,5 @@
 /**
- * DtResult.java
+ * Result.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
@@ -7,15 +7,15 @@
 
 package ACME;
 
-public class DtResult  implements java.io.Serializable {
+public class Result  implements java.io.Serializable {
     private boolean isOk;
 
     private java.lang.String message;
 
-    public DtResult() {
+    public Result() {
     }
 
-    public DtResult(
+    public Result(
            boolean isOk,
            java.lang.String message) {
            this.isOk = isOk;
@@ -24,7 +24,7 @@ public class DtResult  implements java.io.Serializable {
 
 
     /**
-     * Gets the isOk value for this DtResult.
+     * Gets the isOk value for this Result.
      * 
      * @return isOk
      */
@@ -34,7 +34,7 @@ public class DtResult  implements java.io.Serializable {
 
 
     /**
-     * Sets the isOk value for this DtResult.
+     * Sets the isOk value for this Result.
      * 
      * @param isOk
      */
@@ -44,7 +44,7 @@ public class DtResult  implements java.io.Serializable {
 
 
     /**
-     * Gets the message value for this DtResult.
+     * Gets the message value for this Result.
      * 
      * @return message
      */
@@ -54,7 +54,7 @@ public class DtResult  implements java.io.Serializable {
 
 
     /**
-     * Sets the message value for this DtResult.
+     * Sets the message value for this Result.
      * 
      * @param message
      */
@@ -64,8 +64,8 @@ public class DtResult  implements java.io.Serializable {
 
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof DtResult)) return false;
-        DtResult other = (DtResult) obj;
+        if (!(obj instanceof Result)) return false;
+        Result other = (Result) obj;
         if (obj == null) return false;
         if (this == obj) return true;
         if (__equalsCalc != null) {
@@ -99,10 +99,10 @@ public class DtResult  implements java.io.Serializable {
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(DtResult.class, true);
+        new org.apache.axis.description.TypeDesc(Result.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("ACME", "dtResult"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("ACME", "result"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("isOk");
         elemField.setXmlName(new javax.xml.namespace.QName("", "isOk"));

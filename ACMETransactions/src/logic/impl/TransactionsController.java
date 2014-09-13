@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import logic.datatypes.Constants;
-import logic.datatypes.DTTransaction;
+import logic.datatypes.Transaction;
 import logic.datatypes.InvalidDataException;
 import logic.interfaces.ITransactions;
 
@@ -16,7 +16,7 @@ public class TransactionsController implements ITransactions {
 		return String.format("Transaccion [ %d ] invalida: %s", id,msg);
 	}
 	
-	private void ValidateTransaction(DTTransaction t)throws InvalidDataException{
+	private void ValidateTransaction(Transaction t)throws InvalidDataException{
 		if (t == null){
 			throw new InvalidDataException("Transaction no puede ser null.");
 		}
@@ -97,14 +97,14 @@ public class TransactionsController implements ITransactions {
 	}
 	
 	@Override
-	public void ProcessTransaction(List<DTTransaction> data) throws InvalidDataException {
+	public void ProcessTransaction(List<Transaction> data) throws InvalidDataException {
 
 		if(data == null || data.isEmpty()){
 			throw new InvalidDataException("Lista de transacciones vacia.");
 		}
 		
 		ArrayList<String> errors = new ArrayList<String>();
-		for(DTTransaction t : data){
+		for(Transaction t : data){
 			try{
 				this.ValidateTransaction(t);			
 			}

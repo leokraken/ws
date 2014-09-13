@@ -1,5 +1,5 @@
 /**
- * DtTransaction.java
+ * Transaction.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
@@ -7,7 +7,7 @@
 
 package ACME;
 
-public class DtTransaction  implements java.io.Serializable {
+public class Transaction  implements java.io.Serializable {
     private long id;
 
     private java.lang.String fecha;
@@ -30,10 +30,10 @@ public class DtTransaction  implements java.io.Serializable {
 
     private java.math.BigDecimal monto;
 
-    public DtTransaction() {
+    public Transaction() {
     }
 
-    public DtTransaction(
+    public Transaction(
            long id,
            java.lang.String fecha,
            java.lang.String hora,
@@ -60,7 +60,7 @@ public class DtTransaction  implements java.io.Serializable {
 
 
     /**
-     * Gets the id value for this DtTransaction.
+     * Gets the id value for this Transaction.
      * 
      * @return id
      */
@@ -70,7 +70,7 @@ public class DtTransaction  implements java.io.Serializable {
 
 
     /**
-     * Sets the id value for this DtTransaction.
+     * Sets the id value for this Transaction.
      * 
      * @param id
      */
@@ -80,7 +80,7 @@ public class DtTransaction  implements java.io.Serializable {
 
 
     /**
-     * Gets the fecha value for this DtTransaction.
+     * Gets the fecha value for this Transaction.
      * 
      * @return fecha
      */
@@ -90,7 +90,7 @@ public class DtTransaction  implements java.io.Serializable {
 
 
     /**
-     * Sets the fecha value for this DtTransaction.
+     * Sets the fecha value for this Transaction.
      * 
      * @param fecha
      */
@@ -100,7 +100,7 @@ public class DtTransaction  implements java.io.Serializable {
 
 
     /**
-     * Gets the hora value for this DtTransaction.
+     * Gets the hora value for this Transaction.
      * 
      * @return hora
      */
@@ -110,7 +110,7 @@ public class DtTransaction  implements java.io.Serializable {
 
 
     /**
-     * Sets the hora value for this DtTransaction.
+     * Sets the hora value for this Transaction.
      * 
      * @param hora
      */
@@ -120,7 +120,7 @@ public class DtTransaction  implements java.io.Serializable {
 
 
     /**
-     * Gets the tipo value for this DtTransaction.
+     * Gets the tipo value for this Transaction.
      * 
      * @return tipo
      */
@@ -130,7 +130,7 @@ public class DtTransaction  implements java.io.Serializable {
 
 
     /**
-     * Sets the tipo value for this DtTransaction.
+     * Sets the tipo value for this Transaction.
      * 
      * @param tipo
      */
@@ -140,7 +140,7 @@ public class DtTransaction  implements java.io.Serializable {
 
 
     /**
-     * Gets the codigoComercio value for this DtTransaction.
+     * Gets the codigoComercio value for this Transaction.
      * 
      * @return codigoComercio
      */
@@ -150,7 +150,7 @@ public class DtTransaction  implements java.io.Serializable {
 
 
     /**
-     * Sets the codigoComercio value for this DtTransaction.
+     * Sets the codigoComercio value for this Transaction.
      * 
      * @param codigoComercio
      */
@@ -160,7 +160,7 @@ public class DtTransaction  implements java.io.Serializable {
 
 
     /**
-     * Gets the nombreComercio value for this DtTransaction.
+     * Gets the nombreComercio value for this Transaction.
      * 
      * @return nombreComercio
      */
@@ -170,7 +170,7 @@ public class DtTransaction  implements java.io.Serializable {
 
 
     /**
-     * Sets the nombreComercio value for this DtTransaction.
+     * Sets the nombreComercio value for this Transaction.
      * 
      * @param nombreComercio
      */
@@ -180,7 +180,7 @@ public class DtTransaction  implements java.io.Serializable {
 
 
     /**
-     * Gets the mumeroTarjeta value for this DtTransaction.
+     * Gets the mumeroTarjeta value for this Transaction.
      * 
      * @return mumeroTarjeta
      */
@@ -190,7 +190,7 @@ public class DtTransaction  implements java.io.Serializable {
 
 
     /**
-     * Sets the mumeroTarjeta value for this DtTransaction.
+     * Sets the mumeroTarjeta value for this Transaction.
      * 
      * @param mumeroTarjeta
      */
@@ -200,7 +200,7 @@ public class DtTransaction  implements java.io.Serializable {
 
 
     /**
-     * Gets the tipoTarjeta value for this DtTransaction.
+     * Gets the tipoTarjeta value for this Transaction.
      * 
      * @return tipoTarjeta
      */
@@ -210,7 +210,7 @@ public class DtTransaction  implements java.io.Serializable {
 
 
     /**
-     * Sets the tipoTarjeta value for this DtTransaction.
+     * Sets the tipoTarjeta value for this Transaction.
      * 
      * @param tipoTarjeta
      */
@@ -220,7 +220,7 @@ public class DtTransaction  implements java.io.Serializable {
 
 
     /**
-     * Gets the codigoMoneda value for this DtTransaction.
+     * Gets the codigoMoneda value for this Transaction.
      * 
      * @return codigoMoneda
      */
@@ -230,7 +230,7 @@ public class DtTransaction  implements java.io.Serializable {
 
 
     /**
-     * Sets the codigoMoneda value for this DtTransaction.
+     * Sets the codigoMoneda value for this Transaction.
      * 
      * @param codigoMoneda
      */
@@ -240,7 +240,7 @@ public class DtTransaction  implements java.io.Serializable {
 
 
     /**
-     * Gets the tipoDispositivo value for this DtTransaction.
+     * Gets the tipoDispositivo value for this Transaction.
      * 
      * @return tipoDispositivo
      */
@@ -250,7 +250,7 @@ public class DtTransaction  implements java.io.Serializable {
 
 
     /**
-     * Sets the tipoDispositivo value for this DtTransaction.
+     * Sets the tipoDispositivo value for this Transaction.
      * 
      * @param tipoDispositivo
      */
@@ -260,7 +260,7 @@ public class DtTransaction  implements java.io.Serializable {
 
 
     /**
-     * Gets the monto value for this DtTransaction.
+     * Gets the monto value for this Transaction.
      * 
      * @return monto
      */
@@ -270,7 +270,7 @@ public class DtTransaction  implements java.io.Serializable {
 
 
     /**
-     * Sets the monto value for this DtTransaction.
+     * Sets the monto value for this Transaction.
      * 
      * @param monto
      */
@@ -280,8 +280,8 @@ public class DtTransaction  implements java.io.Serializable {
 
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof DtTransaction)) return false;
-        DtTransaction other = (DtTransaction) obj;
+        if (!(obj instanceof Transaction)) return false;
+        Transaction other = (Transaction) obj;
         if (obj == null) return false;
         if (this == obj) return true;
         if (__equalsCalc != null) {
@@ -369,10 +369,10 @@ public class DtTransaction  implements java.io.Serializable {
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(DtTransaction.class, true);
+        new org.apache.axis.description.TypeDesc(Transaction.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("ACME", "dtTransaction"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("ACME", "transaction"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("id");
         elemField.setXmlName(new javax.xml.namespace.QName("", "id"));

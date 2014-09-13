@@ -6,7 +6,7 @@ import javax.jws.*;
 import javax.jws.soap.SOAPBinding;
 import javax.jws.soap.SOAPBinding.*;
 
-import logic.datatypes.DTTransaction;
+import logic.datatypes.Transaction;
 import logic.interfaces.Factory;
 import logic.interfaces.ITransactions;
 
@@ -29,9 +29,9 @@ public class TransactionsWS {
 	 * @return estructura que contiene si todo salio bien, y el mensaje en caso de error.
 	 */
 	@WebMethod
-	public DTResult ReceiveTransactions(DTTransaction[] data){
+	public Result ReceiveTransactions(Transaction[] data){
 		
-		DTResult res = new DTResult();
+		Result res = new Result();
 		res.setOk(true);
 		res.setMessage("Transacciones procesadas correctamente.");
 		

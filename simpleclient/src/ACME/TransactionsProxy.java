@@ -44,7 +44,7 @@ public class TransactionsProxy implements ACME.Transactions_PortType {
     return transactions_PortType;
   }
   
-  public ACME.DtResult receiveTransactions(ACME.DtTransaction[] arg0) throws java.rmi.RemoteException{
+  public ACME.Result receiveTransactions(ACME.Transaction[] arg0) throws java.rmi.RemoteException{
     if (transactions_PortType == null)
       _initTransactionsProxy();
     return transactions_PortType.receiveTransactions(arg0);

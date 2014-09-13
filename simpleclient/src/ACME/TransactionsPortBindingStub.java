@@ -25,11 +25,11 @@ public class TransactionsPortBindingStub extends org.apache.axis.client.Stub imp
         org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ReceiveTransactions");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg0"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("ACME", "dtTransactionArray"), ACME.DtTransaction[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg0"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("ACME", "transactionArray"), ACME.Transaction[].class, false, false);
         param.setItemQName(new javax.xml.namespace.QName("", "item"));
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("ACME", "dtResult"));
-        oper.setReturnClass(ACME.DtResult.class);
+        oper.setReturnType(new javax.xml.namespace.QName("ACME", "result"));
+        oper.setReturnClass(ACME.Result.class);
         oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
         oper.setStyle(org.apache.axis.constants.Style.RPC);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
@@ -66,25 +66,25 @@ public class TransactionsPortBindingStub extends org.apache.axis.client.Stub imp
             java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
             java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
             java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
-            qName = new javax.xml.namespace.QName("ACME", "dtResult");
+            qName = new javax.xml.namespace.QName("ACME", "result");
             cachedSerQNames.add(qName);
-            cls = ACME.DtResult.class;
+            cls = ACME.Result.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("ACME", "dtTransaction");
+            qName = new javax.xml.namespace.QName("ACME", "transaction");
             cachedSerQNames.add(qName);
-            cls = ACME.DtTransaction.class;
+            cls = ACME.Transaction.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("ACME", "dtTransactionArray");
+            qName = new javax.xml.namespace.QName("ACME", "transactionArray");
             cachedSerQNames.add(qName);
-            cls = ACME.DtTransaction[].class;
+            cls = ACME.Transaction[].class;
             cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("ACME", "dtTransaction");
+            qName = new javax.xml.namespace.QName("ACME", "transaction");
             qName2 = new javax.xml.namespace.QName("", "item");
             cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
             cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
@@ -155,7 +155,7 @@ public class TransactionsPortBindingStub extends org.apache.axis.client.Stub imp
         }
     }
 
-    public ACME.DtResult receiveTransactions(ACME.DtTransaction[] arg0) throws java.rmi.RemoteException {
+    public ACME.Result receiveTransactions(ACME.Transaction[] arg0) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -179,9 +179,9 @@ public class TransactionsPortBindingStub extends org.apache.axis.client.Stub imp
         else {
             extractAttachments(_call);
             try {
-                return (ACME.DtResult) _resp;
+                return (ACME.Result) _resp;
             } catch (java.lang.Exception _exception) {
-                return (ACME.DtResult) org.apache.axis.utils.JavaUtils.convert(_resp, ACME.DtResult.class);
+                return (ACME.Result) org.apache.axis.utils.JavaUtils.convert(_resp, ACME.Result.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {

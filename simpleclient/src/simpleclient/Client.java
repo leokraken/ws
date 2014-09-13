@@ -26,9 +26,9 @@ public class Client {
                         
             System.out.println("Llamando servicio...");
 
-            DtTransaction[] data = new DtTransaction[3];
+            Transaction[] data = new Transaction[3];
             
-            DtTransaction data1 = new DtTransaction();
+            Transaction data1 = new Transaction();
             data1.setCodigoComercio("CACA");
             data1.setCodigoMoneda("UY");
             data1.setFecha("280214");
@@ -41,7 +41,7 @@ public class Client {
             data1.setTipoDispositivo("POS");
             data1.setTipoTarjeta("debito");
             
-            DtTransaction data2 = new DtTransaction();
+            Transaction data2 = new Transaction();
             data2.setCodigoComercio("caca2");
             data2.setCodigoMoneda("USD");
             data2.setFecha("280214");
@@ -54,7 +54,7 @@ public class Client {
             data2.setTipoDispositivo("POS");
             data2.setTipoTarjeta("credito");
             
-            DtTransaction data3 = new DtTransaction();
+            Transaction data3 = new Transaction();
             data3.setCodigoComercio("tres");
             data3.setCodigoMoneda("UY");
             data3.setFecha("311215");
@@ -73,7 +73,7 @@ public class Client {
             
             Transactions_PortType myService = service.gettransactionsPort();
             
-            DtResult res = myService.receiveTransactions(data);
+            Result res = myService.receiveTransactions(data);
             
             System.out.println(res.getMessage());
             

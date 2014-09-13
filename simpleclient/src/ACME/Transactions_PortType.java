@@ -8,5 +8,5 @@
 package ACME;
 
 public interface Transactions_PortType extends java.rmi.Remote {
-    public ACME.DtResult receiveTransactions(ACME.DtTransaction[] arg0) throws java.rmi.RemoteException;
+    public ACME.Result receiveTransactions(ACME.Transaction[] arg0) throws java.rmi.RemoteException;
 }
