@@ -1,5 +1,6 @@
 package ws;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import javax.jws.*;
@@ -7,6 +8,7 @@ import javax.jws.soap.SOAPBinding;
 import javax.jws.soap.SOAPBinding.*;
 
 import logic.datatypes.Transaction;
+import logic.datatypes.Transactions;
 import logic.interfaces.Factory;
 import logic.interfaces.ITransactions;
 
@@ -29,7 +31,7 @@ public class TransactionsWS {
 	 * @return estructura que contiene si todo salio bien, y el mensaje en caso de error.
 	 */
 	@WebMethod
-	public Result ReceiveTransactions(Transaction[] data){
+	public Result ReceiveTransactions(Transactions data){//(Transaction[] data){
 		
 		Result res = new Result();
 		res.setOk(true);
@@ -42,7 +44,8 @@ public class TransactionsWS {
 		else{
 			
 			try{
-				transactionsLogic.ProcessTransaction(Arrays.asList(data));
+				transactionsLogic.ProcessTransaction(data.getTransactionList());//(Arrays.asList(data));
+				//transactionsLogic.ProcessTransaction(data.getTransactionList());
 			}
 			catch(Exception e){
 				res.setOk(false);
