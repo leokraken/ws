@@ -31,7 +31,7 @@ public class TransactionsWS {
 	 * @return estructura que contiene si todo salio bien, y el mensaje en caso de error.
 	 */
 	@WebMethod
-	public Result ReceiveTransactions(Transactions data){//(Transaction[] data){
+	public Result ReceiveTransactions(@WebParam(name ="Transactions")Transactions data){//(Transaction[] data){
 		
 		Result res = new Result();
 		res.setOk(true);
