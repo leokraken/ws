@@ -1,13 +1,13 @@
 package ws;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
-import javax.jws.*;
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
-import javax.jws.soap.SOAPBinding.*;
+import javax.jws.soap.SOAPBinding.ParameterStyle;
+import javax.jws.soap.SOAPBinding.Style;
+import javax.jws.soap.SOAPBinding.Use;
 
-import logic.datatypes.Transaction;
 import logic.datatypes.Transactions;
 import logic.interfaces.Factory;
 import logic.interfaces.ITransactions;
@@ -16,9 +16,10 @@ import logic.interfaces.ITransactions;
 			serviceName = "transactions", 
 			portName="transactionsPort",
 			targetNamespace="ACME")
-@SOAPBinding(style = Style.RPC, parameterStyle = ParameterStyle.WRAPPED)
+//@SOAPBinding(style = Style.RPC, parameterStyle = ParameterStyle.WRAPPED)
+@SOAPBinding(style = SOAPBinding.Style.DOCUMENT, use=Use.LITERAL, parameterStyle=ParameterStyle.BARE)
 public class TransactionsWS {
-	
+
 	private ITransactions transactionsLogic = Factory.getITransactions();
 	
 	
@@ -30,8 +31,9 @@ public class TransactionsWS {
 	 * 
 	 * @return estructura que contiene si todo salio bien, y el mensaje en caso de error.
 	 */
+	
 	@WebMethod
-	public Result ReceiveTransactions(@WebParam(name ="Transactions")Transactions data){//(Transaction[] data){
+	public Result ReceiveTransactions(@WebParam(name ="Transactions")Transactions data){
 		
 		Result res = new Result();
 		res.setOk(true);
