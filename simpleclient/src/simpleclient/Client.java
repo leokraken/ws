@@ -30,7 +30,7 @@ public class Client {
             
             Transaction data1 = new Transaction();
             data1.setCodigoComercio("CACA");
-            data1.setCodigoMoneda("UY");
+            data1.setCodigoMoneda("UYU");
             data1.setFecha("280214");
             data1.setHora("220000");
             data1.setId(32);
@@ -56,7 +56,7 @@ public class Client {
             
             Transaction data3 = new Transaction();
             data3.setCodigoComercio("tres");
-            data3.setCodigoMoneda("UY");
+            data3.setCodigoMoneda("UYU");
             data3.setFecha("311215");
             data3.setHora("220000");
             data3.setId(35);
