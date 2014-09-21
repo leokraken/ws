@@ -8,9 +8,12 @@ import javax.jws.soap.SOAPBinding.ParameterStyle;
 import javax.jws.soap.SOAPBinding.Style;
 import javax.jws.soap.SOAPBinding.Use;
 
+import org.apache.log4j.Logger;
+
 import logic.datatypes.Transactions;
 import logic.interfaces.Factory;
 import logic.interfaces.ITransactions;
+
 
 @WebService(name = "transactions",
 			serviceName = "transactions", 
@@ -21,7 +24,7 @@ import logic.interfaces.ITransactions;
 public class TransactionsWS {
 
 	private ITransactions transactionsLogic = Factory.getITransactions();
-	
+	final static Logger logger = Logger.getLogger(TransactionsWS.class.getName());
 	
 	/**
 	 * Recibe, valida,y guarda un conjunto de transacciones.
@@ -42,16 +45,19 @@ public class TransactionsWS {
 		if(data == null){
 			res.setOk(false);
 			res.setMessage("Servicio no recibio ninguna transaccion.");
+			logger.info("Servicio no recibio ninguna transaccion.");
 		}
 		else{
 			
 			try{
 				transactionsLogic.ProcessTransaction(data.getTransactionList());//(Arrays.asList(data));
 				//transactionsLogic.ProcessTransaction(data.getTransactionList());
+				logger.info("Transacciones procesadas correctamente.");
 			}
 			catch(Exception e){
 				res.setOk(false);
 				res.setMessage("No se pudo procesar las transacciones: " + e.getMessage());
+				logger.error("No se pudo procesar las transacciones: " + e.getMessage());
 			}
 			
 			
