@@ -18,21 +18,3 @@ El servicio se publica en SERVIDOR/nombredelwar/endpoint donde:
 
 -Levantar tomcat desde la carpeta /bin con el comando: startup
 
-**********************************************************************************************************************************
-**********************************************************************************************************************************
-
-
-========================== Para implementar (para acordarse!) ==========================
-
-- Lo implementé con el eclipse de SPRING-TOOL-SUITE. Para el servicio no use la herramienta "create new web service" de este eclipse porque creaba miles de mierdas y no andaba.
-- Para el cliente SI usé lo que trae este eclipse para importar el WSDL y generar las clases.
-
-- Crear dynamic web project
-- Crear clases con logica etc...
-- Crear clase de WS, agregar tags @WebService y otros tags que sean necesarios
-- Configurar web.xml(para especificar servlet) y sun-jaxws.xml(para especificar endpoint), que deben ir en la carpeta WEB-INF
-- exportar .war y hacer deploy.
-
-Para el cliente:
--importar WSDL con eclipse y crear clase que use todo lo generado. Se usa "create new web service client" desde la opcion de new -> other, hay que apuntarlo a la url donde quedo levantado el WS.
--- Si da error la herramienta para importar el wsdl (create new web service client) de eclipse. Hay que ir a la carpeta de plugins y eliminar: javax.xml.soap_1.3.0.v201105210645
