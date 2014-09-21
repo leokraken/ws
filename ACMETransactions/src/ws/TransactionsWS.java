@@ -52,7 +52,7 @@ public class TransactionsWS {
 			try{
 				transactionsLogic.ProcessTransaction(data.getTransactionList());//(Arrays.asList(data));
 				//transactionsLogic.ProcessTransaction(data.getTransactionList());
-				logger.info("Transacciones procesadas correctamente.");
+				logger.info(String.format("[ %d ] Transacciones procesadas correctamente.",data.getTransactionList().size()));
 			}
 			catch(Exception e){
 				res.setOk(false);
